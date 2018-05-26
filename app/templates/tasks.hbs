@@ -1,9 +1,9 @@
 {{!-- {{'new tasks here'}} --}}
 
-{{#each model as |item|}}
-<p>Name: {{item.name}}</p>
-<p>Date: {{item.date}}</p>
-<p>Category: {{item.category}}</p>
-<p>Location: {{item.location}}</p>
-<p>Description: {{item.description}}</p>
+{{#each model as |task|}}
+<p>Name: {{task.name}}</p>
+<p>Date: {{task.date}}</p>
+<p>Category: {{task.category}}</p>
+<p>Location: {{task.location}}</p>
+<p>Description: {{task.description}}</p>
 {{/each}}
