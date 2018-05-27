@@ -1,7 +1,14 @@
+<h2>New Task</h2>
+<label>Task Name</label>
 {{input type="text" placeholder="Task Name" value=name}}
+<label>Work or Recreation</label>
 {{input type="text" placeholder="Work or Recreation" value=category}}
+<label>Date</label>
 {{input type="date" value=date}}
+<label>Location</label>
 {{input type="text" placeholder="Location" value=location}}
+<label>Description</label>
 {{input type="text" placeholder="Description" value=description}}
+<label>Is the task done?</label>
 {{input type="checkbox" class="form-check-input" checked=newTask.is_completed}}
 <button {{action "submit"}}>Save Example</button>
