@@ -1,8 +1,5 @@
 {{!-- {{'new tasks here'}} --}}
 
 {{#each model as |task|}}
-<p>Name: {{task.name}}</p>
-<p>Category: {{task.category}}</p>
-<p>Location: {{task.location}}</p>
-<p>Description: {{task.description}}</p>
+{{update-task task=task deleteTask='deleteTask'}}
 {{/each}}

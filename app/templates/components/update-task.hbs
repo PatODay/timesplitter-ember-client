@@ -1,0 +1,13 @@
+{{#if editing}}
+  {{task-input task=task submit="submit"}}
+{{else}}
+<div {{action "edit"}}>
+<p>Name: {{task.name}}</p>
+<p>Category: {{task.category}}</p>
+<p>Location: {{task.location}}</p>
+<p>Description: {{task.description}}</p>
+<p>ID: {{task.id}}</p>
+<button class='btn-xs btn-danger' {{action 'deleteTask'}}>Delete</button>
+</div>
+
+{{/if}}
