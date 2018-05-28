@@ -6,7 +6,6 @@ export default Component.extend({
       this.set('editing', true)
     },
     submit (task) {
-      // console.log('update task is ', task)
       task.save()
         .then(() => this.set('editing', false))
         .then(() => this.get('flashMessages').success('Task Saved'))
