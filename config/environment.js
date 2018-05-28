@@ -49,7 +49,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/timesplitter-ember-client'
     ENV.locationType = 'hash'
-    ENV.apiHost = 'https://dry-hollows-29032.herokuapp.com/'
+    ENV.apiHost = 'https://dry-hollows-29032.herokuapp.com'
   }
 
   return ENV
