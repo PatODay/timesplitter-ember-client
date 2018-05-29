@@ -1,6 +1,9 @@
 import Component from '@ember/component';
+import { alias } from '@ember/object/computed'
 
 export default Component.extend({
+  classNameBindings: ['crossed'],
+  crossed: alias('task.is_completed'),
   actions: {
     edit () {
       this.set('editing', true)
@@ -13,6 +16,10 @@ export default Component.extend({
     },
     deleteTask () {
       this.sendAction('deleteTask', this.get('task'))
+    },
+    toggleTaskDone () {
+      this.toggleProperty('crossed')
+      this.sendAction('toggleTaskDone', this.get('task'))
     }
   }
 });

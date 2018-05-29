@@ -41,6 +41,10 @@ export default Route.extend({
     //       .danger('There was a problem. Please try again.')
     //   })
     // },
+    toggleTaskDone (task) {
+      // task.toggleProperty('is_completed')
+      return task.save()
+    },
     saveComplete (task) {
       task.save()
     }

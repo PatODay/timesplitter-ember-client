@@ -1,3 +1,6 @@
+{{#if task.is_completed}}
+<p>Task: {{task.name}}</p>
+  {{else}}
 {{#if editing}}
   {{task-input task=task submit="submit"}}
 {{else}}
@@ -10,5 +13,9 @@
 <p>ID: {{task.id}}</p>
 <button class='btn-xs btn-danger' {{action 'deleteTask'}}>Delete</button>
 </div>
-
 {{/if}}
+{{/if}}
+<div class="is-completed">
+  <label>Is this task done?</label>
+  <input type="checkbox" {{action 'toggleTaskDone'}}>
+</div>

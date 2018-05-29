@@ -1,5 +1,5 @@
 {{!-- {{'new tasks here'}} --}}
 
 {{#each model as |task|}}
-{{update-task task=task deleteTask='deleteTask'}}
+{{update-task task=task deleteTask='deleteTask' toggleTaskDone='toggleTaskDone'}}
 {{/each}}
