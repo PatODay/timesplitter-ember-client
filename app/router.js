@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('change-password')
   this.route('tasks');
   this.route('create-task');
+  this.route('help');
 })
 
 export default Router

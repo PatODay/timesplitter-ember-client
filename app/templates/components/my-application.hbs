@@ -3,11 +3,6 @@
     {{navbar-header}}
 
     <div class="collapse navbar-collapse" id="navigation">
-      <ul class="nav navbar-nav">
-        {{#if isAuthenticated}}
-        <li>Welcome {{user}}!</li>
-        {{/if}}
-      </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
         <li>{{#link-to "create-task"}}Create Task{{/link-to}}</li>
@@ -21,8 +16,11 @@
     </div>
   </div>
 </nav>
-
+{{#if isAuthenticated}}
+<h1>Welcome to TimeSplitter, {{user}}!</h1>
+{{else}}
 <h1>Welcome to TimeSplitter!</h1>
+{{/if}}
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
