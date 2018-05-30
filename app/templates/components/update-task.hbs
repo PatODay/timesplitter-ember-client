@@ -1,4 +1,5 @@
 {{#if task.is_completed}}
+<h3>Completed</h3>
 <p>Task: {{task.name}}</p>
 <p>Date: {{task.date}}</p>
 <div class="is-completed-true">
@@ -9,7 +10,7 @@
 {{#if editing}}
   {{update-form task=task update="update"}}
 {{else}}
-<h3>Tasks to complete</h3>
+<h3>Task</h3>
 <div {{action "edit"}}>
 <p>Name: {{task.name}}</p>
 <p>Date: {{task.date}}</p>
