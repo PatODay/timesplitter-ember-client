@@ -7,18 +7,6 @@ export default Route.extend({
     return this.get('store').findAll('task')
   },
   actions: {
-    // createTask (newTask) {
-    //   this.get('store').createRecord('task', newTask)
-    //   .save()
-    //   .then(() => {
-    //     this.get('flashMessages')
-    //       .success('You created a new task!')
-    //   })
-    //   .catch(() => {
-    //     this.get('flashMessages')
-    //       .danger('There was a problem. Please try again.')
-    //   })
-    // },
     deleteTask (task) {
       return task.destroyRecord()
       .then(() => {
@@ -30,20 +18,10 @@ export default Route.extend({
           .danger('There was a problem. Please try again.')
       })
     },
-    // updateTask (task) {
-    //   task.save()
-    //   .then(() => {
-    //     this.get('flashMessages')
-    //       .success('You updated this task!')
-    //   })
-    //   .catch(() => {
-    //     this.get('flashMessages')
-    //       .danger('There was a problem. Please try again.')
-    //   })
-    // },
     toggleTaskDone (task) {
-      // task.toggleProperty('is_completed')
       return task.save()
+      .then(() => this.get('flashMessages').success('Task Status Updated'))
+      .catch(() => this.get('flashMessages').danger('Failed to chage task status'))
     },
     saveComplete (task) {
       task.save()

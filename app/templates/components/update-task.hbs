@@ -1,9 +1,15 @@
 {{#if task.is_completed}}
 <p>Task: {{task.name}}</p>
+<p>Date: {{task.date}}</p>
+<div class="is-completed-true">
+  <label>Completed</label>
+  <input type="checkbox" {{action 'toggleTaskDone'}} checked="toggleTaskDone">
+</div>
   {{else}}
 {{#if editing}}
   {{task-input task=task submit="submit"}}
 {{else}}
+<h3>Tasks to complete</h3>
 <div {{action "edit"}}>
 <p>Name: {{task.name}}</p>
 <p>Date: {{task.date}}</p>
@@ -14,8 +20,8 @@
 <button class='btn-xs btn-danger' {{action 'deleteTask'}}>Delete</button>
 </div>
 {{/if}}
-{{/if}}
-<div class="is-completed">
+<div class="is-completed-false">
   <label>Is this task done?</label>
   <input type="checkbox" {{action 'toggleTaskDone'}}>
 </div>
+{{/if}}
