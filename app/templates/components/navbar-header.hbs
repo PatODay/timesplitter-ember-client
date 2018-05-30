@@ -1,3 +1,5 @@
 {{hamburger-menu}}
 {{#link-to "application" class="navbar-brand"}}Home{{/link-to}}
+{{#if isAuthenticated}}
 {{#link-to "tasks" class="navbar-brand"}}Tasks{{/link-to}}
+{{/if}}
