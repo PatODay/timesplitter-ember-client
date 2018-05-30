@@ -8,7 +8,7 @@ export default Component.extend({
     edit () {
       this.set('editing', true)
     },
-    submit (task) {
+    update (task) {
       task.save()
         .then(() => this.set('editing', false))
         .then(() => this.get('flashMessages').success('Task Saved'))
