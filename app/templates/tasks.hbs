@@ -1,5 +1,7 @@
-{{!-- {{'new tasks here'}} --}}
-{{!-- <h3>Tasks to complete</h3> --}}
+{{#if model.length}}
 {{#each model as |task|}}
 {{update-task task=task deleteTask='deleteTask' toggleTaskDone='toggleTaskDone'}}
 {{/each}}
+{{else}}
+<h3>You don't have any tasks. Must be nice having no responsibilities.</h3>
+{{/if}}

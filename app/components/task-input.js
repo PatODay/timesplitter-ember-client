@@ -2,12 +2,6 @@ import Component from '@ember/component'
 // import { alias } from '@ember/object/computed'
 
 export default Component.extend({
-  // name: alias('task.name'),
-  // category: alias('task.category'),
-  // date: alias('task.date'),
-  // location: alias('task.location'),
-  // description: alias('task.description'),
-  // is_completed: alias('task.is_completed'),
   newTask: '',
   actions: {
     submit () {
