@@ -1,3 +1,7 @@
+{{!-- {{#if hasBlock}} --}}
+{{!-- {{#if task.isEmpty}}
+<h3>You don't have any tasks. Must be nice having no responsibilities.</h3>
+{{else}} --}}
 {{#if task.is_completed}}
 <h3>Completed</h3>
 <p>Task: {{task.name}}</p>
@@ -27,3 +31,8 @@
 {{/if}}
 
 {{/if}}
+{{!-- {{/if}} --}}
+
+{{!-- {{else}}
+<h3>You don't have any tasks. Must be nice having no responsibilities.</h3>
+{{/if}} --}}
