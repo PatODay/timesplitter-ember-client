@@ -21,7 +21,7 @@ export default Route.extend({
           .success('Successfully changed your password!')
         })
         .then(() => {
-          this.get('flashMessages').warning('You have been signed out. Please sign in again.')
+          this.get('flashMessages').warning('You have been signed out. Please sign in with your new password.')
         })
         .catch(() => {
           this.get('flashMessages')
