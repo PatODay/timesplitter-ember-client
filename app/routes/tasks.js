@@ -23,6 +23,11 @@ export default Route.extend({
       .then(() => this.get('flashMessages').success('Task Status Updated'))
       .catch(() => this.get('flashMessages').danger('Failed to chage task status'))
     },
+    closeEdit (task) {
+      this.set('editing', false)
+      // return true
+      task.reload()
+    },
     saveComplete (task) {
       task.save()
     }

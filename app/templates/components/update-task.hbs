@@ -8,7 +8,7 @@
 </div>
   {{else}}
 {{#if editing}}
-  {{update-form task=task update="update" deleteTask="deleteTask"}}
+  {{update-form task=task update="update" deleteTask="deleteTask" closeEdit="closeEdit"}}
 {{else}}
 <h3>Task</h3>
 <div {{action "edit"}}>

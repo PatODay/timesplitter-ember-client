@@ -8,11 +8,18 @@ export default Component.extend({
     edit () {
       this.set('editing', true)
     },
+    closeEdit (task) {
+      this.sendAction('closeEdit', task)
+    },
     update (task) {
       task.save()
         .then(() => this.set('editing', false))
         .then(() => this.get('flashMessages').success('Task Saved'))
-        .catch(() => this.get('flashMessages').danger('Edit Failed'))
+        .catch(() => {
+          this.get('flashMessages').danger('Edit Failed')
+          // this.transitionTo('tasks')
+          // task.destroyRecord()
+        })
     },
     deleteTask (task) {
       this.sendAction('deleteTask', this.get('task'))
