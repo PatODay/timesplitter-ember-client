@@ -1,12 +1,14 @@
+<form {{action "update" on='submit'}}>
 <h2>Edit Task</h2>
 <label>Task Name</label>
-{{input type="text" placeholder="Task Name" value=name}}
+{{input required=true type="text" placeholder="Task Name" value=name name="task[name]"}}
 <label>Work or Recreation</label>
-{{input "required" type="text" placeholder="Work or Recreation" value=category}}
+{{input required=true type="text" placeholder="Work or Recreation" value=category}}
 <label>Date</label>
-{{input "required" type="date" value=date}}
+{{input required=true type="date" value=date}}
 <label>Location</label>
-{{input "required" type="text" placeholder="Location" value=location}}
+{{input required=true type="text" placeholder="Location" value=location}}
 <label>Description</label>
-{{input "required" type="text" placeholder="Description" value=description}}
-<button {{action "update"}}>Save Task</button>
+{{input required=true type="text" placeholder="Description" value=description}}
+<button type="submit">Save Task</button>
+</form>
