@@ -18,6 +18,9 @@ export default Component.extend({
       this.set('task.description', this.get('description'))
       this.set('task.is_completed', this.get('is_completed'))
       this.sendAction('update', this.get('task'))
+    },
+    deleteTask () {
+      return this.sendAction('deleteTask', this.get('task'))
     }
   }
 });

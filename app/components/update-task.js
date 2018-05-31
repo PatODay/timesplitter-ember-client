@@ -14,7 +14,7 @@ export default Component.extend({
         .then(() => this.get('flashMessages').success('Task Saved'))
         .catch(() => this.get('flashMessages').danger('Edit Failed'))
     },
-    deleteTask () {
+    deleteTask (task) {
       this.sendAction('deleteTask', this.get('task'))
     },
     toggleTaskDone () {
