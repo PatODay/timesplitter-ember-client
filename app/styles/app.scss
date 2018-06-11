@@ -1,5 +1,30 @@
 @import "ember-bootstrap/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+$bangers: 'Bangers', cursive;
+
+$sage: #96B497;
 
 .crossed {
   text-decoration: line-through;
+}
+
+body {
+  font-family: $bangers;
+  background-color: $sage;
+}
+
+.header {
+  text-align: center;
+  font-size: 75px;
+}
+
+.incomplete-tasks {
+  text-align: center;
+  font-size: 24px;
+}
+
+.completed-tasks {
+  text-align: center;
+  font-size: 24px;
 }
