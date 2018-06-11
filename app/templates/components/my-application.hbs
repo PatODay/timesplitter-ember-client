@@ -22,7 +22,7 @@
 <button class="create-task">{{#link-to "create-task"}}Create Task{{/link-to}}</button>
 <button class="view-tasks">{{#link-to "tasks"}}Tasks{{/link-to}}</button> --}}
 {{else}}
-<h1>Welcome to TimeSplitter!</h1>
+<h1 class="no-auth-header">Welcome to TimeSplitter!</h1>
 {{/if}}
 
 {{#each flashMessages.queue as |flash|}}
